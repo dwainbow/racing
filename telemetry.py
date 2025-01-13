@@ -5,7 +5,6 @@ import os
 def send_hb(socket,playstation_ip, send_port):
         send_data = 'A'
         socket.sendto(send_data.encode('utf-8'), (playstation_ip, send_port))
-        print("here")
         
 playstation_ip = "10.41.1.59" #change to env later  
 print(playstation_ip)
