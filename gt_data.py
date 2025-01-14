@@ -19,7 +19,7 @@ class GT_Data():
 
         self.car_id = struct.unpack('i', data[0x124:0x124 + 4])[0]  # car id
 
-        self.throttle = struct.unpack('B', data[0x91:0x91 + 1])[0] / 2.55  # throttle as percent 
+        self.throttle_percent = struct.unpack('B', data[0x91:0x91 + 1])[0] / 2.55  # throttle as percent 
         self.rpm = struct.unpack('f', data[0x3C:0x3C + 4])[0]  # rpm``
         self.brake_pressure = struct.unpack('B', data[0x92:0x92 + 1])[0] / 2.55  # brake as percent 
 
