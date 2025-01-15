@@ -23,9 +23,9 @@ class GT_Data():
         self.rpm = struct.unpack('f', data[0x3C:0x3C + 4])[0]  # rpm``
         self.brake_pressure = struct.unpack('B', data[0x92:0x92 + 1])[0] / 2.55  # brake as percent 
 
-        self.boost = struct.unpack('f', data[0x50:0x50 + 4])[0] - 1  # boost
-        self.is_paused = bin(struct.unpack('B', data[0x8E:0x8E + 1])[0])[-2] == '1'
-        self.in_race = bin(struct.unpack('B', data[0x8E:0x8E + 1])[0])[-1] == '1'
+        # self.boost = struct.unpack('f', data[0x50:0x50 + 4])[0] - 1  # boost
+        # self.is_paused = bin(struct.unpack('B', data[0x8E:0x8E + 1])[0])[-2] == '1'
+        # self.in_race = bin(struct.unpack('B', data[0x8E:0x8E + 1])[0])[-1] == '1'
         
         self.position_x = struct.unpack('f', data[0x04:0x04 + 4])[0]  # pos X
         self.position_y = struct.unpack('f', data[0x08:0x08 + 4])[0]  # pos Y
